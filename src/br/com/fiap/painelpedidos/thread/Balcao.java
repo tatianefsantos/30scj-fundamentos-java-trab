@@ -1,8 +1,11 @@
-package br.com.fiap.painelpedidos;
+package br.com.fiap.painelpedidos.thread;
 
 import java.text.DecimalFormat;
 
-class Balcao extends Thread {
+import br.com.fiap.painelpedidos.IPanelController;
+import br.com.fiap.painelpedidos.sinc.Pedido;
+
+public class Balcao extends Thread {
 	private Pedido pedido;
 	private IPanelController display;
 	DecimalFormat df = new DecimalFormat("##");

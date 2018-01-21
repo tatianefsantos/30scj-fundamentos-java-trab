@@ -1,4 +1,6 @@
-package br.com.fiap.painelpedidos;
+package br.com.fiap.painelpedidos.impl;
+
+import br.com.fiap.painelpedidos.IPanelController;
 
 public class PanelController implements IPanelController {
 

@@ -1,4 +1,4 @@
-package br.com.fiap.painelpedidos;
+package br.com.fiap.painelpedidos.sinc;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ public class Pedido {
 	private ArrayList<String> pedidos = new ArrayList<String>();
 	private int capacidade = 20;
 
-	public synchronized int retiraPedido() {
+	public synchronized String retiraPedido() {
 		while (pedidos.isEmpty()) {
 			try {
 				wait();
@@ -18,7 +18,8 @@ public class Pedido {
 		pedidos.remove(numPedido);
 		pedidos.trimToSize();
 		notifyAll();
-		return (linhaPedido);
+		numPedido += " " + String.valueOf(linhaPedido); 
+		return (numPedido);
 	}
 
 	public synchronized void adicionaPedido(String c) {

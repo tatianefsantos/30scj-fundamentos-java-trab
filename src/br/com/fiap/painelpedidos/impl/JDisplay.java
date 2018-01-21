@@ -1,7 +1,9 @@
-package br.com.fiap.painelpedidos;
+package br.com.fiap.painelpedidos.impl;
 
 import java.awt.*;
 import javax.swing.*;
+
+import br.com.fiap.painelpedidos.IJDisplay;
 
 public class JDisplay implements IJDisplay {
 
